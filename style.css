@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab&family=Roboto:wght@300&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-family: 'Roboto Slab', serif;
+}
+
+:root{
+    --main-color: rgb(255,192,203);
+}
+
+li{
+    list-style: none;
+}
+.body-2{
+    position: relative;
+}
+nav{
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 999;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+}
+.logo{
+    align-self: center;
+}
+.container{
+    margin-top: 80px;
+}
+.menu{
+    align-self: center;
+}
+.menu-list, .menu-list-1{
+    display: flex;
+}
+.menu-list li, .menu-list-1 li{
+    margin: 0 10px;
+}
+.menu-list a, .menu-list-1 a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+.menu-list a:hover, .menu-list-1 a:hover{
+    color: var(--main-color);
+}
+#open-menu, #close-menu{
+    display: none;
+    font-size: 24px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.col-2{
+    padding: 4%;
+    flex-basis: 50%;
+    text-align: center;
+}
+.chapter{
+    padding: 5%;
+}
+.chapter h1{
+    color: var(--main-color);
+    font-size: 36px;
+}
+
+
+@media only screen and (max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+    #open-menu{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+    .menu-list-1{
+        display: none;
+        top: 60px;
+        right: 5px;
+        border: 1px solid var(--main-color);
+        width: 50%;
+        padding: 20px;
+        background: #fff;
+        position: fixed;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
